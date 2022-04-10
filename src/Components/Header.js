@@ -27,10 +27,10 @@ const Name = styled.h1`
 `;
 
 export const Header = () => (
-    <HeaderBlock>
+    <HeaderBlock className="header-block">
         <HeaderContainer>
             <LogoImg src={Logo} alt="logo"/>
-            <Name>Стильные вместе</Name>
+            <Name className="name">Стильные вместе</Name>
             <LogoImg src={Logo} alt="logo"/>
         </HeaderContainer>
     </HeaderBlock>

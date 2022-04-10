@@ -14,6 +14,7 @@ const List = styled.div`
     padding: 15px;
     line-height: 25px;
     border: 3px solid #fbec5d;
+    box-shadow: 5px 10px 10px rgba(0,0,0,0.25);
 `;
 
 const SmallTitle = styled.h3`
@@ -35,7 +36,7 @@ const Ul = styled.ul`
 export const Shops = () => (
     <>
     <Banner></Banner>
-    <ShopsBlock>
+    <ShopsBlock className="shops-block">
         <List>
             <SmallTitle>MultyBrand</SmallTitle>
             <Ul>

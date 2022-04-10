@@ -8,6 +8,7 @@ const TeamBlock = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: 60px;
     padding-top: 30px;
 `;
@@ -39,26 +40,26 @@ const Small = styled.p`
 export const Team = () => (
     <>
     <Title>Shopping Team</Title>
-   <TeamBlock>
-       <Person>
+   <TeamBlock className="teamblock">
+       <Person className="person">
            <ImagePerson src={Hulik} alt="hulik"/>
-           <TextPerson>
+           <TextPerson className="text-person">
                <h3>Настя Гулик</h3>
                <Small>Минск-Мир</Small>
                 <Small>+37544 757-75-02</Small>
            </TextPerson>
        </Person>
-       <Person>
+       <Person className="person">
            <ImagePerson src={Liza} alt="khvesko"/>
-           <TextPerson>
+           <TextPerson className="text-person">
                <h3>Лиза Хвесько</h3>
                <Small>ст.м.Могилевская</Small>
                 <Small>+37529 139-25-06</Small>
            </TextPerson>
        </Person>
-       <Person>
+       <Person className="person">
            <ImagePerson src={Krasnova} alt="krasnova"/>
-           <TextPerson>
+           <TextPerson className="text-person">
                <h3>Настя Краснова</h3>
                <Small>ул. Козыревская</Small>
                 <Small>+37529 613-67-80</Small>
