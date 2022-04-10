@@ -48,12 +48,24 @@ export const GlobalStyle = createGlobalStyle `
     .header-block{
       padding: 20px 20px;
     }
+   .header-container{
+     flex-direction: column;
+   }
+   .logo{
+     display: none;
+   }
     .name{
-      font-size: 40px;
+      font-size: 35px;
       line-height: 50px;
     }
     .rools-block{
+      margin-top: 30px;
       padding: 20px; 
+    }
+    .text{
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
     }
     .person{
       margin: 0 auto 30px auto;
@@ -62,7 +74,11 @@ export const GlobalStyle = createGlobalStyle `
       margin-top: 10px;
     }
     .shops-block{
-       padding: 40px 20px;
+      padding: 20px 50px;
+      flex-direction: column;
+    }
+    .list{
+      margin-bottom: 30px;
     }
   }
 `;

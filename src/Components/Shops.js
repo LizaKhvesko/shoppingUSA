@@ -37,7 +37,7 @@ export const Shops = () => (
     <>
     <Banner></Banner>
     <ShopsBlock className="shops-block">
-        <List>
+        <List className="list">
             <SmallTitle>MultyBrand</SmallTitle>
             <Ul>
                 <li><a href="https://www.6pm.com" target="_blank">6pm</a></li>
@@ -57,7 +57,7 @@ export const Shops = () => (
                 <li><a href="https://www.zappos.com/" target="_blank">Zappos</a></li> 
             </Ul>
         </List>
-        <List>
+        <List className="list">
              <SmallTitle>SingleBrand</SmallTitle>
              <Ul>
                 <li><a href="https://www.victoriassecret.com" target="_blank">Victoria Secret</a></li>
