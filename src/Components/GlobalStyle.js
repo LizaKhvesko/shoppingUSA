@@ -74,10 +74,13 @@ export const GlobalStyle = createGlobalStyle `
       margin-top: 10px;
     }
     .shops-block{
-      padding: 20px 50px;
+      padding: 0;
+      margin-top: 20px;
       flex-direction: column;
     }
     .list{
+      margin-left: auto;
+       margin-right: auto;
       margin-bottom: 30px;
     }
   }
