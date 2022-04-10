@@ -71,7 +71,7 @@ export const Shops = () => (
                 <li><a href="https://www.mangooutlet.com/gb/women" target="_blank">Mango UK</a></li>
             </Ul>
         </List>
-        <List>
+        <List className="list">
              <SmallTitle>Children & Family</SmallTitle>
              <Ul>
                 <li><a href="https://oldnavy.gap.com" target="_blank">Old, Gap, Banana</a></li>
