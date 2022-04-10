@@ -1,0 +1,380 @@
+[debug] [2022-04-10T11:36:23.895Z] ----------------------------------------------------------------------
+[debug] [2022-04-10T11:36:23.898Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-04-10T11:36:23.898Z] CLI Version:   10.6.0
+[debug] [2022-04-10T11:36:23.898Z] Platform:      darwin
+[debug] [2022-04-10T11:36:23.898Z] Node Version:  v14.17.1
+[debug] [2022-04-10T11:36:23.900Z] Time:          Sun Apr 10 2022 14:36:23 GMT+0300 (Москва, стандартное время)
+[debug] [2022-04-10T11:36:23.900Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-10T11:36:23.998Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-10T11:36:23.998Z] > authorizing via signed-in user (khvesko.sp@gmail.com)
+[debug] [2022-04-10T11:36:23.998Z] [iam] checking project shoppingusa-c45e2 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2022-04-10T11:36:24.000Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoppingusa-c45e2:testIamPermissions [none]
+[debug] [2022-04-10T11:36:24.000Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoppingusa-c45e2:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2022-04-10T11:36:25.403Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoppingusa-c45e2:testIamPermissions 200
+[debug] [2022-04-10T11:36:25.403Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoppingusa-c45e2:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2022-04-10T11:36:25.406Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 [none]
+[debug] [2022-04-10T11:36:25.693Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 200
+[debug] [2022-04-10T11:36:25.693Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 {"projectId":"shoppingusa-c45e2","projectNumber":"21177408343","displayName":"ShoppingUSA","name":"projects/shoppingusa-c45e2","resources":{"hostingSite":"shoppingusa-c45e2","realtimeDatabaseInstance":"shoppingusa-c45e2-default-rtdb"},"state":"ACTIVE"}
+[debug] [2022-04-10T11:36:25.694Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 [none]
+[debug] [2022-04-10T11:36:25.966Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 200
+[debug] [2022-04-10T11:36:25.967Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 {"projectId":"shoppingusa-c45e2","projectNumber":"21177408343","displayName":"ShoppingUSA","name":"projects/shoppingusa-c45e2","resources":{"hostingSite":"shoppingusa-c45e2","realtimeDatabaseInstance":"shoppingusa-c45e2-default-rtdb"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'shoppingusa-c45e2'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2022-04-10T11:36:25.978Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-04-10T11:36:25.979Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-10T11:36:26.226Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 10 Apr 2022 11:36:26 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:36:26.289Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/shoppingusa-c45e2/locations/-/instances/shoppingusa-c45e2-default-rtdb  
+ 
+[debug] [2022-04-10T11:36:26.640Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 10 Apr 2022 11:36:26 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:36:26.643Z] >>> HTTP REQUEST PUT https://shoppingusa-c45e2-default-rtdb.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2022-04-10T11:36:27.290Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Sun, 10 Apr 2022 11:36:27 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] ✔  database: rules syntax for database shoppingusa-c45e2-default-rtdb is valid 
+[debug] [2022-04-10T11:36:27.292Z] > refreshing access token with scopes: []
+[debug] [2022-04-10T11:36:27.293Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-10T11:36:27.448Z] <<< HTTP RESPONSE 200 {"date":"Sun, 10 Apr 2022 11:36:27 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:36:27.502Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 [none]
+[debug] [2022-04-10T11:36:27.764Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 200
+[debug] [2022-04-10T11:36:27.764Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 {"projectId":"shoppingusa-c45e2","projectNumber":"21177408343","displayName":"ShoppingUSA","name":"projects/shoppingusa-c45e2","resources":{"hostingSite":"shoppingusa-c45e2","realtimeDatabaseInstance":"shoppingusa-c45e2-default-rtdb"},"state":"ACTIVE"}
+[debug] [2022-04-10T11:36:27.767Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions [none]
+[debug] [2022-04-10T11:36:27.768Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-04-10T11:36:29.357Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions 200
+[debug] [2022-04-10T11:36:29.357Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions {"name":"projects/21177408343/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[shoppingusa-c45e2]: beginning deploy... 
+[info] i  hosting[shoppingusa-c45e2]: found 10 files in build 
+[debug] [2022-04-10T11:36:29.373Z] [hosting] uploading with 200 concurrency
+[debug] [2022-04-10T11:36:29.528Z] [hosting] hash cache [YnVpbGQ] stored for 10 files
+[debug] [2022-04-10T11:36:29.528Z] [hosting][hash queue][FINAL] {"max":146,"min":15,"avg":63.8,"active":0,"complete":10,"success":10,"errored":0,"retried":0,"total":10,"elapsed":152}
+[debug] [2022-04-10T11:36:29.530Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74:populateFiles [none]
+[debug] [2022-04-10T11:36:29.530Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74:populateFiles {"files":{"/asset-manifest.json":"a29b5e257e0cf056c4f22b7e4588293b49f20e814adc229d4e9d4a297b3875b4","/index.html":"d7978ea0b2f768ee6b789251ec266d54a4e2e30e993b49b201ca7e0b97f2affa","/static/js/main.dd6a45c6.js.LICENSE.txt":"f6b0f65f2ecf3fd5506028ffde7cf9b679a04b096c2f55156fb234635e8500ba","/static/media/logo.8c70f0b929fd713b0078.png":"66830b0b66599692f7c69acd86cfc4c2d6c0f1d31e1cfcb5f25903deb6589b84","/static/media/banner.a6f209694fe63d872aba.jpg":"46708fcdaaa19cd3a4eafe5c38b1317b8d20140fab1b2d234aca0cd3ba1fb5ae","/static/js/main.dd6a45c6.js":"840f5352617acd58df51ee9461a57f707c9a68e3784f8210ad634829a9286210","/static/media/krasnova.7736660751c80ba4d133.jpg":"afea8bf5a4ee78d569c806611451ec86bc6fbb3d8cadb97aaa50869e3babb68c","/static/media/liza.b849c9daa152d58915c8.jpg":"703cbebb06291f3d53a026c2f4a397ac009b24aeaa9e8a08400844044f64aa81","/static/media/hulik.d4976b90b2e47cbcd9b0.jpg":"a55e36bf248927760f80a3cb6b51493fa5e710d391572359f77bb1d12248353e","/static/js/main.dd6a45c6.js.map":"74e38e01524f5bc59a48f53dc748f7de60b1e88c62fc90d6ef9f8f8e0f43b40a"}}
+[debug] [2022-04-10T11:36:30.830Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74:populateFiles 200
+[debug] [2022-04-10T11:36:30.830Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74:populateFiles {"uploadRequiredHashes":["74e38e01524f5bc59a48f53dc748f7de60b1e88c62fc90d6ef9f8f8e0f43b40a","a29b5e257e0cf056c4f22b7e4588293b49f20e814adc229d4e9d4a297b3875b4","840f5352617acd58df51ee9461a57f707c9a68e3784f8210ad634829a9286210","d7978ea0b2f768ee6b789251ec266d54a4e2e30e993b49b201ca7e0b97f2affa"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74/files"}
+[debug] [2022-04-10T11:36:30.833Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74/files/74e38e01524f5bc59a48f53dc748f7de60b1e88c62fc90d6ef9f8f8e0f43b40a [none]
+[debug] [2022-04-10T11:36:30.834Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74/files/74e38e01524f5bc59a48f53dc748f7de60b1e88c62fc90d6ef9f8f8e0f43b40a [stream]
+[debug] [2022-04-10T11:36:30.837Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74/files/a29b5e257e0cf056c4f22b7e4588293b49f20e814adc229d4e9d4a297b3875b4 [none]
+[debug] [2022-04-10T11:36:30.837Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74/files/a29b5e257e0cf056c4f22b7e4588293b49f20e814adc229d4e9d4a297b3875b4 [stream]
+[debug] [2022-04-10T11:36:30.840Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74/files/840f5352617acd58df51ee9461a57f707c9a68e3784f8210ad634829a9286210 [none]
+[debug] [2022-04-10T11:36:30.840Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74/files/840f5352617acd58df51ee9461a57f707c9a68e3784f8210ad634829a9286210 [stream]
+[debug] [2022-04-10T11:36:30.841Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74/files/d7978ea0b2f768ee6b789251ec266d54a4e2e30e993b49b201ca7e0b97f2affa [none]
+[debug] [2022-04-10T11:36:30.841Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74/files/d7978ea0b2f768ee6b789251ec266d54a4e2e30e993b49b201ca7e0b97f2affa [stream]
+[debug] [2022-04-10T11:36:30.843Z] [hosting][populate queue][FINAL] {"max":1306,"min":1306,"avg":1306,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1316}
+[debug] [2022-04-10T11:36:30.843Z] [hosting] uploads queued: 4
+[debug] [2022-04-10T11:36:32.216Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74/files/d7978ea0b2f768ee6b789251ec266d54a4e2e30e993b49b201ca7e0b97f2affa 200
+[debug] [2022-04-10T11:36:32.217Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74/files/d7978ea0b2f768ee6b789251ec266d54a4e2e30e993b49b201ca7e0b97f2affa [stream]
+[debug] [2022-04-10T11:36:32.219Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74/files/840f5352617acd58df51ee9461a57f707c9a68e3784f8210ad634829a9286210 200
+[debug] [2022-04-10T11:36:32.220Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74/files/840f5352617acd58df51ee9461a57f707c9a68e3784f8210ad634829a9286210 [stream]
+[debug] [2022-04-10T11:36:32.232Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74/files/a29b5e257e0cf056c4f22b7e4588293b49f20e814adc229d4e9d4a297b3875b4 200
+[debug] [2022-04-10T11:36:32.233Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74/files/a29b5e257e0cf056c4f22b7e4588293b49f20e814adc229d4e9d4a297b3875b4 [stream]
+[debug] [2022-04-10T11:36:32.356Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74/files/74e38e01524f5bc59a48f53dc748f7de60b1e88c62fc90d6ef9f8f8e0f43b40a 200
+[debug] [2022-04-10T11:36:32.356Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74/files/74e38e01524f5bc59a48f53dc748f7de60b1e88c62fc90d6ef9f8f8e0f43b40a [stream]
+[debug] [2022-04-10T11:36:32.357Z] [hosting][upload queue][FINAL] {"max":1526,"min":1384,"avg":1424.75,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":1526}
+[info] ✔  hosting[shoppingusa-c45e2]: file upload complete 
+[debug] [2022-04-10T11:36:32.358Z] [hosting] deploy completed after 2999ms
+[info] i  database: releasing rules... 
+[debug] [2022-04-10T11:36:32.365Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-04-10T11:36:32.366Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-10T11:36:32.575Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sun, 10 Apr 2022 11:36:32 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:36:32.632Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/shoppingusa-c45e2/locations/-/instances/shoppingusa-c45e2-default-rtdb  
+ 
+[debug] [2022-04-10T11:36:32.927Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 10 Apr 2022 11:36:33 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:36:32.930Z] >>> HTTP REQUEST PUT https://shoppingusa-c45e2-default-rtdb.firebaseio.com/.settings/rules.json  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2022-04-10T11:36:33.373Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Sun, 10 Apr 2022 11:36:33 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] ✔  database: rules for database shoppingusa-c45e2-default-rtdb released successfully 
+[debug] [2022-04-10T11:36:33.375Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "shoppingusa-c45e2"
+    },
+    "site": "shoppingusa-c45e2",
+    "version": "projects/21177408343/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74"
+  }
+]
+[info] i  hosting[shoppingusa-c45e2]: finalizing version... 
+[debug] [2022-04-10T11:36:33.377Z] > refreshing access token with scopes: []
+[debug] [2022-04-10T11:36:33.377Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-10T11:36:33.576Z] <<< HTTP RESPONSE 200 {"date":"Sun, 10 Apr 2022 11:36:33 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:36:33.630Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74 updateMask=status
+[debug] [2022-04-10T11:36:33.630Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/c47570ad1e3cbb74 {"status":"FINALIZED"}
+[debug] [2022-04-10T11:38:16.458Z] ----------------------------------------------------------------------
+[debug] [2022-04-10T11:38:16.459Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-04-10T11:38:16.460Z] CLI Version:   10.6.0
+[debug] [2022-04-10T11:38:16.460Z] Platform:      darwin
+[debug] [2022-04-10T11:38:16.460Z] Node Version:  v14.17.1
+[debug] [2022-04-10T11:38:16.461Z] Time:          Sun Apr 10 2022 14:38:16 GMT+0300 (Москва, стандартное время)
+[debug] [2022-04-10T11:38:16.461Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-10T11:38:16.535Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-10T11:38:16.535Z] > authorizing via signed-in user (khvesko.sp@gmail.com)
+[debug] [2022-04-10T11:38:16.536Z] [iam] checking project shoppingusa-c45e2 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2022-04-10T11:38:16.538Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoppingusa-c45e2:testIamPermissions [none]
+[debug] [2022-04-10T11:38:16.538Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoppingusa-c45e2:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2022-04-10T11:38:17.128Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoppingusa-c45e2:testIamPermissions 200
+[debug] [2022-04-10T11:38:17.129Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoppingusa-c45e2:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2022-04-10T11:38:17.131Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 [none]
+[debug] [2022-04-10T11:38:17.411Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 200
+[debug] [2022-04-10T11:38:17.411Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 {"projectId":"shoppingusa-c45e2","projectNumber":"21177408343","displayName":"ShoppingUSA","name":"projects/shoppingusa-c45e2","resources":{"hostingSite":"shoppingusa-c45e2","realtimeDatabaseInstance":"shoppingusa-c45e2-default-rtdb"},"state":"ACTIVE"}
+[debug] [2022-04-10T11:38:17.413Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 [none]
+[debug] [2022-04-10T11:38:17.679Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 200
+[debug] [2022-04-10T11:38:17.679Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 {"projectId":"shoppingusa-c45e2","projectNumber":"21177408343","displayName":"ShoppingUSA","name":"projects/shoppingusa-c45e2","resources":{"hostingSite":"shoppingusa-c45e2","realtimeDatabaseInstance":"shoppingusa-c45e2-default-rtdb"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'shoppingusa-c45e2'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2022-04-10T11:38:17.690Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-04-10T11:38:17.690Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-10T11:38:17.908Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 10 Apr 2022 11:38:18 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:38:17.976Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/shoppingusa-c45e2/locations/-/instances/shoppingusa-c45e2-default-rtdb  
+ 
+[debug] [2022-04-10T11:38:18.269Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 10 Apr 2022 11:38:18 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:38:18.274Z] >>> HTTP REQUEST PUT https://shoppingusa-c45e2-default-rtdb.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2022-04-10T11:38:18.816Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Sun, 10 Apr 2022 11:38:18 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] ✔  database: rules syntax for database shoppingusa-c45e2-default-rtdb is valid 
+[debug] [2022-04-10T11:38:18.819Z] > refreshing access token with scopes: []
+[debug] [2022-04-10T11:38:18.820Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-10T11:38:19.002Z] <<< HTTP RESPONSE 200 {"date":"Sun, 10 Apr 2022 11:38:19 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:38:19.063Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 [none]
+[debug] [2022-04-10T11:38:19.344Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 200
+[debug] [2022-04-10T11:38:19.344Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 {"projectId":"shoppingusa-c45e2","projectNumber":"21177408343","displayName":"ShoppingUSA","name":"projects/shoppingusa-c45e2","resources":{"hostingSite":"shoppingusa-c45e2","realtimeDatabaseInstance":"shoppingusa-c45e2-default-rtdb"},"state":"ACTIVE"}
+[debug] [2022-04-10T11:38:19.348Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions [none]
+[debug] [2022-04-10T11:38:19.349Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-04-10T11:38:20.756Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions 200
+[debug] [2022-04-10T11:38:20.756Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions {"name":"projects/21177408343/sites/shoppingusa-c45e2/versions/c845b4bed95b7d2a","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[shoppingusa-c45e2]: beginning deploy... 
+[info] i  hosting[shoppingusa-c45e2]: found 10 files in build 
+[debug] [2022-04-10T11:38:20.775Z] [hosting] uploading with 200 concurrency
+[debug] [2022-04-10T11:38:20.782Z] [hosting] hash cache [YnVpbGQ] stored for 10 files
+[debug] [2022-04-10T11:38:20.782Z] [hosting][hash queue][FINAL] {"max":2,"min":1,"avg":1,"active":0,"complete":10,"success":10,"errored":0,"retried":0,"total":10,"elapsed":4}
+[debug] [2022-04-10T11:38:20.783Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/c845b4bed95b7d2a:populateFiles [none]
+[debug] [2022-04-10T11:38:20.783Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/c845b4bed95b7d2a:populateFiles {"files":{"/asset-manifest.json":"a29b5e257e0cf056c4f22b7e4588293b49f20e814adc229d4e9d4a297b3875b4","/index.html":"d7978ea0b2f768ee6b789251ec266d54a4e2e30e993b49b201ca7e0b97f2affa","/static/js/main.dd6a45c6.js":"840f5352617acd58df51ee9461a57f707c9a68e3784f8210ad634829a9286210","/static/js/main.dd6a45c6.js.LICENSE.txt":"f6b0f65f2ecf3fd5506028ffde7cf9b679a04b096c2f55156fb234635e8500ba","/static/js/main.dd6a45c6.js.map":"74e38e01524f5bc59a48f53dc748f7de60b1e88c62fc90d6ef9f8f8e0f43b40a","/static/media/banner.a6f209694fe63d872aba.jpg":"46708fcdaaa19cd3a4eafe5c38b1317b8d20140fab1b2d234aca0cd3ba1fb5ae","/static/media/hulik.d4976b90b2e47cbcd9b0.jpg":"a55e36bf248927760f80a3cb6b51493fa5e710d391572359f77bb1d12248353e","/static/media/krasnova.7736660751c80ba4d133.jpg":"afea8bf5a4ee78d569c806611451ec86bc6fbb3d8cadb97aaa50869e3babb68c","/static/media/liza.b849c9daa152d58915c8.jpg":"703cbebb06291f3d53a026c2f4a397ac009b24aeaa9e8a08400844044f64aa81","/static/media/logo.8c70f0b929fd713b0078.png":"66830b0b66599692f7c69acd86cfc4c2d6c0f1d31e1cfcb5f25903deb6589b84"}}
+[debug] [2022-04-10T11:38:21.955Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/c845b4bed95b7d2a:populateFiles 200
+[debug] [2022-04-10T11:38:21.955Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/c845b4bed95b7d2a:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/c845b4bed95b7d2a/files"}
+[debug] [2022-04-10T11:38:21.956Z] [hosting][populate queue][FINAL] {"max":1176,"min":1176,"avg":1176,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1176}
+[debug] [2022-04-10T11:38:21.956Z] [hosting] uploads queued: 0
+[debug] [2022-04-10T11:38:21.957Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1649590701957}
+[info] ✔  hosting[shoppingusa-c45e2]: file upload complete 
+[debug] [2022-04-10T11:38:21.958Z] [hosting] deploy completed after 1201ms
+[info] i  database: releasing rules... 
+[debug] [2022-04-10T11:38:21.966Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-04-10T11:38:21.967Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-10T11:38:22.178Z] <<< HTTP RESPONSE 200 {"date":"Sun, 10 Apr 2022 11:38:22 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:38:22.230Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/shoppingusa-c45e2/locations/-/instances/shoppingusa-c45e2-default-rtdb  
+ 
+[debug] [2022-04-10T11:38:22.819Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 10 Apr 2022 11:38:22 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:38:22.823Z] >>> HTTP REQUEST PUT https://shoppingusa-c45e2-default-rtdb.firebaseio.com/.settings/rules.json  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2022-04-10T11:38:23.265Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Sun, 10 Apr 2022 11:38:23 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] ✔  database: rules for database shoppingusa-c45e2-default-rtdb released successfully 
+[debug] [2022-04-10T11:38:23.268Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "shoppingusa-c45e2"
+    },
+    "site": "shoppingusa-c45e2",
+    "version": "projects/21177408343/sites/shoppingusa-c45e2/versions/c845b4bed95b7d2a"
+  }
+]
+[info] i  hosting[shoppingusa-c45e2]: finalizing version... 
+[debug] [2022-04-10T11:38:23.270Z] > refreshing access token with scopes: []
+[debug] [2022-04-10T11:38:23.270Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-10T11:38:23.471Z] <<< HTTP RESPONSE 200 {"date":"Sun, 10 Apr 2022 11:38:23 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:38:23.535Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/c845b4bed95b7d2a updateMask=status
+[debug] [2022-04-10T11:38:23.535Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/c845b4bed95b7d2a {"status":"FINALIZED"}
+[debug] [2022-04-10T11:38:24.799Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/c845b4bed95b7d2a 200
+[debug] [2022-04-10T11:38:24.800Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/c845b4bed95b7d2a {"name":"projects/21177408343/sites/shoppingusa-c45e2/versions/c845b4bed95b7d2a","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-04-10T11:38:20.371169Z","createUser":{"email":"khvesko.sp@gmail.com"},"finalizeTime":"2022-04-10T11:38:24.850665Z","finalizeUser":{"email":"khvesko.sp@gmail.com"}}
+[debug] [2022-04-10T11:38:24.800Z] [hosting] finalized version for shoppingusa-c45e2:[object Object]
+[info] ✔  hosting[shoppingusa-c45e2]: version finalized 
+[info] i  hosting[shoppingusa-c45e2]: releasing new version... 
+[debug] [2022-04-10T11:38:24.801Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/releases versionName=projects%2F21177408343%2Fsites%2Fshoppingusa-c45e2%2Fversions%2Fc845b4bed95b7d2a
+[debug] [2022-04-10T11:38:24.801Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/releases {"message":null}
+[debug] [2022-04-10T11:38:25.943Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/releases 200
+[debug] [2022-04-10T11:38:25.944Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/releases {"name":"projects/21177408343/sites/shoppingusa-c45e2/releases/1649590705291036","version":{"name":"projects/21177408343/sites/shoppingusa-c45e2/versions/c845b4bed95b7d2a","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-04-10T11:38:20.371169Z","createUser":{"email":"khvesko.sp@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AATXAJwGfRjGzj56lPBc22dyiwB_nbKbsp2kRnHj2WTm=mo"},"finalizeTime":"2022-04-10T11:38:24.850665Z","finalizeUser":{"email":"khvesko.sp@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AATXAJwGfRjGzj56lPBc22dyiwB_nbKbsp2kRnHj2WTm=mo"}},"type":"DEPLOY","releaseTime":"2022-04-10T11:38:25.291036856Z","releaseUser":{"email":"khvesko.sp@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AATXAJwGfRjGzj56lPBc22dyiwB_nbKbsp2kRnHj2WTm=mo"}}
+[debug] [2022-04-10T11:38:25.944Z] [hosting] release: {"name":"projects/21177408343/sites/shoppingusa-c45e2/releases/1649590705291036","version":{"name":"projects/21177408343/sites/shoppingusa-c45e2/versions/c845b4bed95b7d2a","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-04-10T11:38:20.371169Z","createUser":{"email":"khvesko.sp@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AATXAJwGfRjGzj56lPBc22dyiwB_nbKbsp2kRnHj2WTm=mo"},"finalizeTime":"2022-04-10T11:38:24.850665Z","finalizeUser":{"email":"khvesko.sp@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AATXAJwGfRjGzj56lPBc22dyiwB_nbKbsp2kRnHj2WTm=mo"}},"type":"DEPLOY","releaseTime":"2022-04-10T11:38:25.291036856Z","releaseUser":{"email":"khvesko.sp@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AATXAJwGfRjGzj56lPBc22dyiwB_nbKbsp2kRnHj2WTm=mo"}}
+[info] ✔  hosting[shoppingusa-c45e2]: release complete 
+[debug] [2022-04-10T11:39:26.242Z] ----------------------------------------------------------------------
+[debug] [2022-04-10T11:39:26.244Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-04-10T11:39:26.245Z] CLI Version:   10.6.0
+[debug] [2022-04-10T11:39:26.245Z] Platform:      darwin
+[debug] [2022-04-10T11:39:26.245Z] Node Version:  v14.17.1
+[debug] [2022-04-10T11:39:26.246Z] Time:          Sun Apr 10 2022 14:39:26 GMT+0300 (Москва, стандартное время)
+[debug] [2022-04-10T11:39:26.246Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-10T11:39:26.311Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-10T11:39:26.311Z] > authorizing via signed-in user (khvesko.sp@gmail.com)
+[debug] [2022-04-10T11:39:26.311Z] [iam] checking project shoppingusa-c45e2 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2022-04-10T11:39:26.313Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoppingusa-c45e2:testIamPermissions [none]
+[debug] [2022-04-10T11:39:26.313Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoppingusa-c45e2:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2022-04-10T11:39:26.602Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoppingusa-c45e2:testIamPermissions 200
+[debug] [2022-04-10T11:39:26.603Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoppingusa-c45e2:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2022-04-10T11:39:26.605Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 [none]
+[debug] [2022-04-10T11:39:26.887Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 200
+[debug] [2022-04-10T11:39:26.888Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 {"projectId":"shoppingusa-c45e2","projectNumber":"21177408343","displayName":"ShoppingUSA","name":"projects/shoppingusa-c45e2","resources":{"hostingSite":"shoppingusa-c45e2","realtimeDatabaseInstance":"shoppingusa-c45e2-default-rtdb"},"state":"ACTIVE"}
+[debug] [2022-04-10T11:39:26.889Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 [none]
+[debug] [2022-04-10T11:39:27.138Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 200
+[debug] [2022-04-10T11:39:27.139Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 {"projectId":"shoppingusa-c45e2","projectNumber":"21177408343","displayName":"ShoppingUSA","name":"projects/shoppingusa-c45e2","resources":{"hostingSite":"shoppingusa-c45e2","realtimeDatabaseInstance":"shoppingusa-c45e2-default-rtdb"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'shoppingusa-c45e2'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2022-04-10T11:39:27.152Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-04-10T11:39:27.153Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-10T11:39:27.382Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Sun, 10 Apr 2022 11:39:27 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:39:27.445Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/shoppingusa-c45e2/locations/-/instances/shoppingusa-c45e2-default-rtdb  
+ 
+[debug] [2022-04-10T11:39:27.726Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 10 Apr 2022 11:39:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:39:27.734Z] >>> HTTP REQUEST PUT https://shoppingusa-c45e2-default-rtdb.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2022-04-10T11:39:28.246Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Sun, 10 Apr 2022 11:39:28 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] ✔  database: rules syntax for database shoppingusa-c45e2-default-rtdb is valid 
+[debug] [2022-04-10T11:39:28.249Z] > refreshing access token with scopes: []
+[debug] [2022-04-10T11:39:28.250Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-10T11:39:28.464Z] <<< HTTP RESPONSE 200 {"date":"Sun, 10 Apr 2022 11:39:28 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:39:28.524Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 [none]
+[debug] [2022-04-10T11:39:28.796Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 200
+[debug] [2022-04-10T11:39:28.796Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/shoppingusa-c45e2 {"projectId":"shoppingusa-c45e2","projectNumber":"21177408343","displayName":"ShoppingUSA","name":"projects/shoppingusa-c45e2","resources":{"hostingSite":"shoppingusa-c45e2","realtimeDatabaseInstance":"shoppingusa-c45e2-default-rtdb"},"state":"ACTIVE"}
+[debug] [2022-04-10T11:39:28.801Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions [none]
+[debug] [2022-04-10T11:39:28.801Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-04-10T11:39:30.344Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions 200
+[debug] [2022-04-10T11:39:30.344Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions {"name":"projects/21177408343/sites/shoppingusa-c45e2/versions/af8dceced9657e90","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[shoppingusa-c45e2]: beginning deploy... 
+[info] i  hosting[shoppingusa-c45e2]: found 10 files in build 
+[debug] [2022-04-10T11:39:30.360Z] [hosting] uploading with 200 concurrency
+[debug] [2022-04-10T11:39:30.366Z] [hosting] hash cache [YnVpbGQ] stored for 10 files
+[debug] [2022-04-10T11:39:30.367Z] [hosting][hash queue][FINAL] {"max":1,"min":0,"avg":0,"active":0,"complete":10,"success":10,"errored":0,"retried":0,"total":10,"elapsed":5}
+[debug] [2022-04-10T11:39:30.367Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/af8dceced9657e90:populateFiles [none]
+[debug] [2022-04-10T11:39:30.368Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/af8dceced9657e90:populateFiles {"files":{"/asset-manifest.json":"a29b5e257e0cf056c4f22b7e4588293b49f20e814adc229d4e9d4a297b3875b4","/index.html":"d7978ea0b2f768ee6b789251ec266d54a4e2e30e993b49b201ca7e0b97f2affa","/static/js/main.dd6a45c6.js":"840f5352617acd58df51ee9461a57f707c9a68e3784f8210ad634829a9286210","/static/js/main.dd6a45c6.js.LICENSE.txt":"f6b0f65f2ecf3fd5506028ffde7cf9b679a04b096c2f55156fb234635e8500ba","/static/js/main.dd6a45c6.js.map":"74e38e01524f5bc59a48f53dc748f7de60b1e88c62fc90d6ef9f8f8e0f43b40a","/static/media/banner.a6f209694fe63d872aba.jpg":"46708fcdaaa19cd3a4eafe5c38b1317b8d20140fab1b2d234aca0cd3ba1fb5ae","/static/media/hulik.d4976b90b2e47cbcd9b0.jpg":"a55e36bf248927760f80a3cb6b51493fa5e710d391572359f77bb1d12248353e","/static/media/krasnova.7736660751c80ba4d133.jpg":"afea8bf5a4ee78d569c806611451ec86bc6fbb3d8cadb97aaa50869e3babb68c","/static/media/liza.b849c9daa152d58915c8.jpg":"703cbebb06291f3d53a026c2f4a397ac009b24aeaa9e8a08400844044f64aa81","/static/media/logo.8c70f0b929fd713b0078.png":"66830b0b66599692f7c69acd86cfc4c2d6c0f1d31e1cfcb5f25903deb6589b84"}}
+[debug] [2022-04-10T11:39:31.561Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/af8dceced9657e90:populateFiles 200
+[debug] [2022-04-10T11:39:31.562Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/af8dceced9657e90:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/shoppingusa-c45e2/versions/af8dceced9657e90/files"}
+[debug] [2022-04-10T11:39:31.562Z] [hosting][populate queue][FINAL] {"max":1197,"min":1197,"avg":1197,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1198}
+[debug] [2022-04-10T11:39:31.562Z] [hosting] uploads queued: 0
+[debug] [2022-04-10T11:39:31.563Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1649590771563}
+[info] ✔  hosting[shoppingusa-c45e2]: file upload complete 
+[debug] [2022-04-10T11:39:31.564Z] [hosting] deploy completed after 1218ms
+[info] i  database: releasing rules... 
+[debug] [2022-04-10T11:39:31.569Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-04-10T11:39:31.570Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-10T11:39:31.784Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Sun, 10 Apr 2022 11:39:31 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:39:31.840Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/shoppingusa-c45e2/locations/-/instances/shoppingusa-c45e2-default-rtdb  
+ 
+[debug] [2022-04-10T11:39:32.126Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 10 Apr 2022 11:39:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:39:32.129Z] >>> HTTP REQUEST PUT https://shoppingusa-c45e2-default-rtdb.firebaseio.com/.settings/rules.json  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2022-04-10T11:39:32.563Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Sun, 10 Apr 2022 11:39:32 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] ✔  database: rules for database shoppingusa-c45e2-default-rtdb released successfully 
+[debug] [2022-04-10T11:39:32.566Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "shoppingusa-c45e2"
+    },
+    "site": "shoppingusa-c45e2",
+    "version": "projects/21177408343/sites/shoppingusa-c45e2/versions/af8dceced9657e90"
+  }
+]
+[info] i  hosting[shoppingusa-c45e2]: finalizing version... 
+[debug] [2022-04-10T11:39:32.568Z] > refreshing access token with scopes: []
+[debug] [2022-04-10T11:39:32.569Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-10T11:39:32.787Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Sun, 10 Apr 2022 11:39:32 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-10T11:39:32.845Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/af8dceced9657e90 updateMask=status
+[debug] [2022-04-10T11:39:32.845Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/af8dceced9657e90 {"status":"FINALIZED"}
+[debug] [2022-04-10T11:39:34.046Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/af8dceced9657e90 200
+[debug] [2022-04-10T11:39:34.046Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/versions/af8dceced9657e90 {"name":"projects/21177408343/sites/shoppingusa-c45e2/versions/af8dceced9657e90","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-04-10T11:39:29.791816Z","createUser":{"email":"khvesko.sp@gmail.com"},"finalizeTime":"2022-04-10T11:39:34.029827Z","finalizeUser":{"email":"khvesko.sp@gmail.com"}}
+[debug] [2022-04-10T11:39:34.046Z] [hosting] finalized version for shoppingusa-c45e2:[object Object]
+[info] ✔  hosting[shoppingusa-c45e2]: version finalized 
+[info] i  hosting[shoppingusa-c45e2]: releasing new version... 
+[debug] [2022-04-10T11:39:34.048Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/releases versionName=projects%2F21177408343%2Fsites%2Fshoppingusa-c45e2%2Fversions%2Faf8dceced9657e90
+[debug] [2022-04-10T11:39:34.048Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/releases {"message":null}
+[debug] [2022-04-10T11:39:35.269Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/releases 200
+[debug] [2022-04-10T11:39:35.270Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/21177408343/sites/shoppingusa-c45e2/releases {"name":"projects/21177408343/sites/shoppingusa-c45e2/releases/1649590774485723","version":{"name":"projects/21177408343/sites/shoppingusa-c45e2/versions/af8dceced9657e90","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-04-10T11:39:29.791816Z","createUser":{"email":"khvesko.sp@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AATXAJwGfRjGzj56lPBc22dyiwB_nbKbsp2kRnHj2WTm=mo"},"finalizeTime":"2022-04-10T11:39:34.029827Z","finalizeUser":{"email":"khvesko.sp@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AATXAJwGfRjGzj56lPBc22dyiwB_nbKbsp2kRnHj2WTm=mo"}},"type":"DEPLOY","releaseTime":"2022-04-10T11:39:34.485723326Z","releaseUser":{"email":"khvesko.sp@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AATXAJwGfRjGzj56lPBc22dyiwB_nbKbsp2kRnHj2WTm=mo"}}
+[debug] [2022-04-10T11:39:35.270Z] [hosting] release: {"name":"projects/21177408343/sites/shoppingusa-c45e2/releases/1649590774485723","version":{"name":"projects/21177408343/sites/shoppingusa-c45e2/versions/af8dceced9657e90","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-04-10T11:39:29.791816Z","createUser":{"email":"khvesko.sp@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AATXAJwGfRjGzj56lPBc22dyiwB_nbKbsp2kRnHj2WTm=mo"},"finalizeTime":"2022-04-10T11:39:34.029827Z","finalizeUser":{"email":"khvesko.sp@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AATXAJwGfRjGzj56lPBc22dyiwB_nbKbsp2kRnHj2WTm=mo"}},"type":"DEPLOY","releaseTime":"2022-04-10T11:39:34.485723326Z","releaseUser":{"email":"khvesko.sp@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AATXAJwGfRjGzj56lPBc22dyiwB_nbKbsp2kRnHj2WTm=mo"}}
+[info] ✔  hosting[shoppingusa-c45e2]: release complete 

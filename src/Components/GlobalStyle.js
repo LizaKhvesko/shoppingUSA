@@ -44,4 +44,25 @@ export const GlobalStyle = createGlobalStyle `
   input, button{
     font-family: inherit;
   }
+  @media (max-width: 600px) {
+    .header-block{
+      padding: 20px 20px;
+    }
+    .name{
+      font-size: 40px;
+      line-height: 50px;
+    }
+    .rools-block{
+      padding: 20px; 
+    }
+    .person{
+      margin: 0 auto 30px auto;
+    }
+    .text-person{
+      margin-top: 10px;
+    }
+    .shops-block{
+       padding: 40px 20px;
+    }
+  }
 `;
